@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  height: 100dvh;
+  background: #f9f5e0;
+  font-family: sans-serif;
+}
+
+h1 {
+  margin: auto;
+  color: #f9f5e0;
+  text-align: center;
+}
+
+.ripple-container {
+  width: 80%;
+  height: 80%;
+  margin: auto;
+  padding: 24px;
+  display: flex;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  border-radius: 10px;
+  border: 2px solid #f8d1b4;
+  background: linear-gradient(45deg, #f8e3ca, #f7bf9e);
+}
+
+.ripple {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-radius: 50%;
+  transform: scale(0);
+  background: #f5895c;
+  animation: ripple-animation 600ms linear;
+}
+
+@keyframes ripple-animation {
+  from {
+    opacity: 1;
+    transform: scale(0);
+  }
+  to {
+    opacity: 0;
+    transform: scale(20);
+  }
+}
